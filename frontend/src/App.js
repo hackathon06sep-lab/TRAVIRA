@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Sidebar from './components/Layout/Sidebar';
 import Header from './components/Layout/Header';
 import Dashboard from './pages/Dashboard';
@@ -108,6 +109,7 @@ function App() {
     <AuthProvider>
       <Router>
         <AppContent />
+        <Analytics />
       </Router>
     </AuthProvider>
   );
