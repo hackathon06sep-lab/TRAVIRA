@@ -13,8 +13,8 @@ services:
 
   safety-score:
     build:
-      context: .
-      dockerfile: AI_services/safety_score/Dockerfile
+      context: AI_services/safety_score
+      dockerfile: Dockerfile
     environment:
       JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET in .env}
     healthcheck:
