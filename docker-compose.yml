@@ -26,8 +26,8 @@ services:
 
   case-report:
     build:
-      context: .
-      dockerfile: AI_services/case_report/Dockerfile
+      context: AI_services/case_report
+      dockerfile: Dockerfile
     environment:
       JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET in .env}
     healthcheck:
